@@ -1,0 +1,96 @@
+; FBX 7.4.0 project file
+; Modelo 3D simples de faca para Blender
+FBXHeaderExtension:  {
+    FBXHeaderVersion: 1003
+    FBXVersion: 7400
+    Creator: "OpenAI - Gerador de Faca Simples"
+}
+GlobalSettings:  {
+    Version: 1000
+    Properties70:  {
+        P: "UpAxis", "int", "Integer", "",2
+        P: "UpAxisSign", "int", "Integer", "",1
+        P: "FrontAxis", "int", "Integer", "",1
+        P: "FrontAxisSign", "int", "Integer", "",-1
+        P: "CoordAxis", "int", "Integer", "",0
+        P: "CoordAxisSign", "int", "Integer", "",1
+        P: "UnitScaleFactor", "double", "Number", "",100
+        P: "OriginalUnitScaleFactor", "double", "Number", "",100
+    }
+}
+Documents:  {
+    Count: 1
+    Document: 100000, "Scene", "Scene" {
+        Properties70:  {
+            P: "SourceObject", "object", "", ""
+            P: "ActiveAnimStackName", "KString", "", "", ""
+        }
+        RootNode: 0
+    }
+}
+Definitions:  {
+    Version: 100
+    Count: 4
+    ObjectType: "GlobalSettings" { Count: 1 }
+    ObjectType: "Model" { Count: 1 }
+    ObjectType: "Geometry" { Count: 1 }
+    ObjectType: "Material" { Count: 1 }
+}
+Objects:  {
+    Geometry: 210000, "Geometry::faca", "Mesh" {
+        Vertices: *84 {
+            a:
+        -0.36,-3.2,-0.11,0.36,-3.2,-0.11,0.43,-2.9,-0.11,0.4,-0.2,-0.11,0.3,0.1,-0.11,-0.3,0.1,-0.11,
+        -0.4,-0.2,-0.11,-0.43,-2.9,-0.11,-0.36,-3.2,0.11,0.36,-3.2,0.11,0.43,-2.9,0.11,0.4,-0.2,0.11,
+        0.3,0.1,0.11,-0.3,0.1,0.11,-0.4,-0.2,0.11,-0.43,-2.9,0.11,-0.18,-0.05,-0.05,0.62,-0.05,-0.05,
+        0.6,2.3,-0.05,0.46,2.72,-0.05,0.05,3.25,-0.05,-0.13,2.86,-0.05,-0.18,-0.05,0.05,0.62,-0.05,0.05,
+        0.6,2.3,0.05,0.46,2.72,0.05,0.05,3.25,0.05,-0.13,2.86,0.05
+        }
+        PolygonVertexIndex: *84 {
+            a:
+        7,6,5,4,3,2,1,-1,8,9,10,11,12,13,14,-16,0,1,
+        9,-9,1,2,10,-10,2,3,11,-11,3,4,12,-12,4,5,13,-13,
+        5,6,14,-14,6,7,15,-15,7,0,8,-16,21,20,19,18,17,-17,
+        22,23,24,25,26,-28,16,17,23,-23,17,18,24,-24,18,19,25,-25,
+        19,20,26,-26,20,21,27,-27,21,16,22,-28
+        }
+        GeometryVersion: 124
+        LayerElementMaterial: 0 {
+            Version: 101
+            Name: ""
+            MappingInformationType: "AllSame"
+            ReferenceInformationType: "IndexToDirect"
+            Materials: *1 { a: 0 }
+        }
+        Layer: 0 {
+            Version: 100
+            LayerElement:  { Type: "LayerElementMaterial" TypedIndex: 0 }
+        }
+    }
+    Model: 310000, "Model::faca", "Mesh" {
+        Version: 232
+        Properties70:  {
+            P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+            P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+            P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+        }
+        Shading: T
+        Culling: "CullingOff"
+    }
+    Material: 410000, "Material::metal_faca", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties70:  {
+            P: "DiffuseColor", "Color", "", "A",0.55,0.58,0.62
+            P: "SpecularColor", "Color", "", "A",0.95,0.95,0.95
+            P: "Shininess", "double", "Number", "A",90
+            P: "Opacity", "double", "Number", "A",1
+        }
+    }
+}
+Connections:  {
+    C: "OO",210000,310000
+    C: "OO",310000,0
+    C: "OO",410000,310000
+}
